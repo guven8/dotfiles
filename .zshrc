@@ -134,7 +134,6 @@ export DENO_INSTALL="/home/guven/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 export NODE_OPTIONS="--max-old-space-size=8192"
-export PATH=/home/guven/.deno/bin:/home/guven/bin:/home/guven/.pyenv/shims:/home/guven/.pyenv/bin:/opt/firefox/firefox:/home/guven/.nvm/versions/node/v13.5.0/bin:/home/guven/.cargo/bin:/home/guven/.local/bin:/home/guven/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/ruby
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
