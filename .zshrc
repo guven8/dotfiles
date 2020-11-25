@@ -130,7 +130,7 @@ if [ -d "$HOME/bin" ] ; then
     export PATH="$HOME/bin:$PATH"
 fi
 
-export DENO_INSTALL="/home/guven/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 export NODE_OPTIONS="--max-old-space-size=8192"
