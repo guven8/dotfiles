@@ -137,4 +137,5 @@ export NODE_OPTIONS="--max-old-space-size=8192"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/bin/terraform terraform
-alias config='/usr/bin/git --git-dir=/home/guven/.cfg/ --work-tree=/home/guven'
+alias config="/usr/bin/git --git-dir=/home/guven/.cfg/ --work-tree=$HOME"
+
