@@ -115,5 +115,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-complete -C /usr/bin/terraform terraform
+source "$HOME/.cargo/env"
+alias config='/usr/bin/git --git-dir=/home/guv/.cfg/ --work-tree=/home/guv'
