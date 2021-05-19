@@ -113,12 +113,6 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/$USER/google-cloud-sdk/path.zsh.inc' ]; then . '/home/$USER/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/$USER/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/$USER/google-cloud-sdk/completion.zsh.inc'; fi
-
 export PATH=$PATH:/usr/local/go/bin
 
 export GO_PATH=$HOME/go
@@ -132,3 +126,9 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 eval "$(pyenv init -)"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/guven/google-cloud-sdk/path.zsh.inc' ]; then . '/home/guven/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/guven/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/guven/google-cloud-sdk/completion.zsh.inc'; fi
