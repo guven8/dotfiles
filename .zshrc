@@ -129,4 +129,6 @@ export PATH=$PATH:/home/$USER/.local/bin
 export DENO_INSTALL="/home/$USER/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+eval "$(pyenv init -)"
+
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
