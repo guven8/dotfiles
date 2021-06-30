@@ -104,14 +104,15 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH="$HOME/.vector/bin:$PATH"
-export PATH="/usr/share/logstash/bin:$PATH"
-export PATH="/usr/share/filebeat/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#export PATH="$HOME/.vector/bin:$PATH"
+#export PATH="/usr/share/logstash/bin:$PATH"
+#export PATH="/usr/share/filebeat/bin:$PATH"
+#if command -v pyenv 1>/dev/null 2>&1; then
+#  eval "$(pyenv init -)"
+#fi
 
 export PATH=$PATH:/usr/local/go/bin
 
@@ -123,7 +124,7 @@ export PATH=$PATH:/home/$USER/.local/bin
 export DENO_INSTALL="/home/$USER/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-eval "$(pyenv init -)"
+#eval "$(pyenv init -)"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
