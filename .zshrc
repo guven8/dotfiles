@@ -100,36 +100,56 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias open-scratch="code $HOME/Development/node-projects/scratch"
+alias run-scratch="node $HOME/Development/node-projects/scratch"
 
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
 #export PATH="$HOME/.vector/bin:$PATH"
 #export PATH="/usr/share/logstash/bin:$PATH"
 #export PATH="/usr/share/filebeat/bin:$PATH"
-#if command -v pyenv 1>/dev/null 2>&1; then
-#  eval "$(pyenv init -)"
-#fi
 
+# go
 export PATH=$PATH:/usr/local/go/bin
-
 export GO_PATH=$HOME/go
 export PATH=$PATH:/$GO_PATH/bin
 
 export PATH=$PATH:/home/$USER/.local/bin
 
+# deno
 export DENO_INSTALL="/home/$USER/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-#eval "$(pyenv init -)"
+# cargo
+. "$HOME/.cargo/env"
 
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
+# android
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+# gcloud
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/guven/google-cloud-sdk/path.zsh.inc' ]; then . '/home/guven/google-cloud-sdk/path.zsh.inc'; fi
-
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/guven/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/guven/google-cloud-sdk/completion.zsh.inc'; fi
+
+# java
+export PATH=$HOME/jdk-11.0.11+9/bin:$PATH
+
+# flutter
+export PATH="$PATH:`pwd`/flutter/bin"
